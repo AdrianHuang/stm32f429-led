@@ -23,7 +23,7 @@ __attribute__ ((section(".isr_vector"))) isr_handler isr_vector_table[] =
 	(isr_handler) SP, 	/* Exception No.0: Initial Stack Pointer  */
 	reset_handler,		/* Exception No.1: Reset Handler 	  */
 				/* Exceptions No.2~No14 are ignored here. */
-	[15] = systick_handler,	/* Exception No.15: Initial Stack Pointer */
+	[15] = systick_handler,	/* Exception No.15: System Tick Handler   */
 };
 
 static void systick_enable()
